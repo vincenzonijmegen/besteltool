@@ -107,15 +107,35 @@ export default function App() {
               {data[selected].map((item) => (
                 <div key={item.naam} className="flex justify-between items-center">
                   <span className="text-sm flex-1">{item.naam}</span>
-                  <input
-                    type="number"
-                    min="0"
-                    className="w-20 p-1 border rounded"
-                    value={invoer[selected]?.[item.naam] || ""}
-                    onChange={(e) =>
-                      handleChange(selected, item.naam, parseInt(e.target.value) || "")
-                    }
-                  />
+                  <div className="flex items-center gap-1">
+                    <button
+                      onClick={() =>
+                        handleChange(
+                          selected,
+                          item.naam,
+                          Math.max((invoer[selected]?.[item.naam] || 0) - 1, 0)
+                        )
+                      }
+                      className="px-2 py-1 bg-gray-200 rounded"
+                    >
+                      –
+                    </button>
+                    <div className="w-8 text-center">
+                      {invoer[selected]?.[item.naam] || 0}
+                    </div>
+                    <button
+                      onClick={() =>
+                        handleChange(
+                          selected,
+                          item.naam,
+                          (invoer[selected]?.[item.naam] || 0) + 1
+                        )
+                      }
+                      className="px-2 py-1 bg-gray-200 rounded"
+                    >
+                      +
+                    </button>
+                  </div>
                 </div>
               ))}
 
