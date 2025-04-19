@@ -30,14 +30,14 @@ export default function BestelApp() {
   };
 
   const renderProductList = (producten, state, setState) => (
-    <div className="space-y-2">
+    <div className="space-y-3">
       {producten.map((item) => (
         <div key={item.naam} className="flex justify-between items-center gap-2">
-          <span>{item.naam}</span>
+          <label className="flex-1 text-sm">{item.naam}</label>
           <input
             type="number"
             min="0"
-            className="w-20 p-1 border rounded"
+            className="w-24 p-2 border rounded shadow-sm"
             value={state[item.naam] || ""}
             onChange={(e) =>
               setState({ ...state, [item.naam]: parseInt(e.target.value) || "" })
@@ -49,22 +49,28 @@ export default function BestelApp() {
   );
 
   return (
-    <div className="p-4 space-y-6 max-w-md mx-auto">
-      <h1 className="text-2xl font-bold">📦 Bestellingen</h1>
+    <div className="p-4 space-y-6 max-w-md mx-auto text-gray-800">
+      <h1 className="text-2xl font-bold flex items-center gap-2">
+        📦 <span>Bestellingen</span>
+      </h1>
 
-      <div className="flex gap-4">
+      <div className="flex gap-2">
         <button
           onClick={() => setLeverancier("Profi Gelato")}
-          className={`p-2 rounded ${
-            leverancier === "Profi Gelato" ? "bg-green-500 text-white" : "bg-gray-200"
+          className={`flex-1 py-2 px-4 rounded font-semibold text-sm ${
+            leverancier === "Profi Gelato"
+              ? "bg-green-500 text-white"
+              : "bg-gray-200 text-gray-700"
           }`}
         >
           Profi Gelato
         </button>
         <button
           onClick={() => setLeverancier("Hanos")}
-          className={`p-2 rounded ${
-            leverancier === "Hanos" ? "bg-blue-500 text-white" : "bg-gray-200"
+          className={`flex-1 py-2 px-4 rounded font-semibold text-sm ${
+            leverancier === "Hanos"
+              ? "bg-blue-500 text-white"
+              : "bg-gray-200 text-gray-700"
           }`}
         >
           Hanos
@@ -73,12 +79,15 @@ export default function BestelApp() {
 
       {leverancier === "Profi Gelato" && (
         <div>
-          <h2 className="text-xl font-semibold">🟢 Profi Gelato</h2>
+          <h2 className="text-lg font-semibold flex items-center gap-2">
+            <span className="w-3 h-3 rounded-full bg-green-600 inline-block" />
+            Profi Gelato
+          </h2>
           {renderProductList(profiProducten, profi, setProfi)}
           <a
             href={`https://wa.me/?text=${encodeURIComponent(generateWhatsappText())}`}
             target="_blank"
-            className="block mt-2 bg-green-500 text-white text-center p-2 rounded"
+            className="mt-4 block text-center bg-green-600 text-white font-medium py-2 px-4 rounded shadow"
           >
             Verstuur via WhatsApp
           </a>
@@ -87,8 +96,8 @@ export default function BestelApp() {
 
       {leverancier === "Hanos" && (
         <div>
-          <h2 className="text-xl font-semibold">🛒 Hanos (looproute)</h2>
-                    {renderProductList(hanosProducten, hanos, setHanos)}
+          <h2 className="text-lg font-semibold text-blue-600">🛒 Hanos (looproute)</h2>
+          {renderProductList(hanosProducten, hanos, setHanos)}
         </div>
       )}
     </div>
