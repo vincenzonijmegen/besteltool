@@ -126,26 +126,23 @@ export default function App() {
                 >
                   Wissen
                 </button>
-                
                 <a
                   href={`mailto:info@ijssalonvincenzo.nl?subject=Bestelling ${selected}&body=${encodeURIComponent(whatsappText(selected))}`}
                   className="flex-1 bg-blue-600 text-white text-center py-2 rounded"
                 >
                   Verstuur via e-mail
                 </a>
-                {
-                  selected === "Profi Gelato" && (
-                    <a
-                      href={`https://wa.me/?text=${encodeURIComponent(
-                        whatsappText(selected)
-                      )}`}
-                      target="_blank"
-                      className="flex-1 bg-green-600 text-white text-center py-2 rounded"
-                    >
-                      Verstuur via WhatsApp
-                    </a>
-                  )
-                }
+                {selected === "Profi Gelato" && (
+                  <a
+                    href={`https://wa.me/?text=${encodeURIComponent(
+                      whatsappText(selected)
+                    )}`}
+                    target="_blank"
+                    className="flex-1 bg-green-600 text-white text-center py-2 rounded"
+                  >
+                    Verstuur via WhatsApp
+                  </a>
+                )}
               </div>
             </div>
           )}
