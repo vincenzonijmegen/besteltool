@@ -107,31 +107,55 @@ export default function App() {
               {data[selected].map((item) => (
                 <div key={item.naam} className="flex justify-between items-center">
                   <span className="text-sm flex-1">{item.naam}</span>
-                  <input
-                    type="number"
-                    min="0"
-                    className="w-20 p-1 border rounded"
-                    value={invoer[selected]?.[item.naam] || ""}
-                    onChange={(e) =>
-                      handleChange(selected, item.naam, parseInt(e.target.value) || "")
-                    }
-                  />
+                  <div className="flex items-center gap-1">
+                    <button
+                      onClick={() =>
+                        handleChange(
+                          selected,
+                          item.naam,
+                          Math.max((invoer[selected]?.[item.naam] || 0) - 1, 0)
+                        )
+                      }
+                      className="px-2 py-1 bg-gray-200 rounded"
+                    >
+                      –
+                    </button>
+                    <div className="w-8 text-center">
+                      {invoer[selected]?.[item.naam] || 0}
+                    </div>
+                    <button
+                      onClick={() =>
+                        handleChange(
+                          selected,
+                          item.naam,
+                          (invoer[selected]?.[item.naam] || 0) + 1
+                        )
+                      }
+                      className="px-2 py-1 bg-gray-200 rounded"
+                    >
+                      +
+                    </button>
+                  </div>
                 </div>
               ))}
 
-              <div className="flex gap-2 mt-3">
+              <div className="flex flex-wrap gap-2 mt-3">
                 <button
                   onClick={() => resetInvoer(selected)}
                   className="flex-1 bg-gray-300 text-gray-800 py-2 rounded"
                 >
                   Wissen
                 </button>
+
                 <a
-                  href={`mailto:info@ijssalonvincenzo.nl?subject=Bestelling ${selected}&body=${encodeURIComponent(whatsappText(selected))}`}
+                  href={`mailto:info@ijssalonvincenzo.nl?subject=Bestelling ${selected}&body=${encodeURIComponent(
+                    whatsappText(selected)
+                  )}`}
                   className="flex-1 bg-blue-600 text-white text-center py-2 rounded"
                 >
                   Verstuur via e-mail
                 </a>
+
                 {selected === "Profi Gelato" && (
                   <a
                     href={`https://wa.me/?text=${encodeURIComponent(
