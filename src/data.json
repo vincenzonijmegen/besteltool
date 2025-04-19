@@ -1,0 +1,414 @@
+{
+  "Bristot": [
+    {
+      "naam": "Koffiebonen",
+      "prijs": null
+    },
+    {
+      "naam": "Bekers to go groot",
+      "prijs": null
+    },
+    {
+      "naam": "Deksels to go groot",
+      "prijs": null
+    },
+    {
+      "naam": "Bekers to go klein",
+      "prijs": null
+    },
+    {
+      "naam": "Deksels to go klein",
+      "prijs": null
+    },
+    {
+      "naam": "Roerstaafjes hout",
+      "prijs": null
+    },
+    {
+      "naam": "Suikerzakjes",
+      "prijs": null
+    }
+  ],
+  "Comforties": [
+    {
+      "naam": "Soft Nitril Premium Wit maat M",
+      "prijs": null
+    },
+    {
+      "naam": "Soft Nitril Premium Zwart maat XL",
+      "prijs": null
+    }
+  ],
+  "Hanos": [
+    {
+      "naam": "Friese Vlag Prof. lang houdbaar vol",
+      "prijs": 1.55
+    },
+    {
+      "naam": "Bakgember Shavings /POLAK",
+      "prijs": 1.78
+    },
+    {
+      "naam": "Fudge Caramel",
+      "prijs": null
+    },
+    {
+      "naam": "Ananaspuree ",
+      "prijs": null
+    },
+    {
+      "naam": "Peerpuree",
+      "prijs": null
+    },
+    {
+      "naam": "Tropicalpuree ",
+      "prijs": null
+    },
+    {
+      "naam": "Caramel topping",
+      "prijs": 4.5
+    },
+    {
+      "naam": "Water spa reine (24)",
+      "prijs": 10.25
+    },
+    {
+      "naam": "Spa rood (24)",
+      "prijs": null
+    },
+    {
+      "naam": "Coca Cola (24)",
+      "prijs": 14.2
+    },
+    {
+      "naam": "Coca Cola light (24)",
+      "prijs": 14.2
+    },
+    {
+      "naam": "Lipton Ice Tea blauw (24)",
+      "prijs": 17.4
+    },
+    {
+      "naam": "Lipton Ice Tea groen (24)",
+      "prijs": 17.4
+    },
+    {
+      "naam": "Fanta (24)",
+      "prijs": 17.4
+    },
+    {
+      "naam": "Cassis (24)",
+      "prijs": 15.05
+    },
+    {
+      "naam": "Pindakaas 10 kg",
+      "prijs": 36.95
+    },
+    {
+      "naam": "Nescafe Goud Ergos Oploskoffie /NESTLE",
+      "prijs": 10.95
+    },
+    {
+      "naam": "Pinda's ongezouten",
+      "prijs": 6.14
+    },
+    {
+      "naam": "Geleisuiker",
+      "prijs": 2.25
+    },
+    {
+      "naam": "Bastogne koeken (per 6)",
+      "prijs": 8.95
+    },
+    {
+      "naam": "Oreo",
+      "prijs": null
+    },
+    {
+      "naam": "Servetten",
+      "prijs": null
+    },
+    {
+      "naam": "Toiletpapier (7 x 6 rollen)",
+      "prijs": 27.3
+    },
+    {
+      "naam": "Blauwe zakken 130 liter",
+      "prijs": 3.85
+    },
+    {
+      "naam": "Komo afvalzakken (60 st.)",
+      "prijs": 6.35
+    },
+    {
+      "naam": "Swirl 35 l. zakjes WIT",
+      "prijs": null
+    },
+    {
+      "naam": "Swirl 40 l. zakjes ZWART",
+      "prijs": null
+    },
+    {
+      "naam": "A50/30 bakje wit /DAMPAC (250 stuks)",
+      "prijs": 13.15
+    },
+    {
+      "naam": "Kristal Bleekwater 1 lt. /KRISTA (per 3)",
+      "prijs": 5.9
+    },
+    {
+      "naam": "Afwasborstel 5000 /NEDAC (6 stuks)",
+      "prijs": 4.25
+    },
+    {
+      "naam": "Spons Large (per 6)",
+      "prijs": 12.05
+    },
+    {
+      "naam": "Wasverzachter Robijn",
+      "prijs": 9.95
+    },
+    {
+      "naam": "WC-eend (4 flacons)",
+      "prijs": 8.4
+    },
+    {
+      "naam": "Handzeep (soft care mild)",
+      "prijs": 19.5
+    },
+    {
+      "naam": "Tork mini (per 3)",
+      "prijs": 15.2
+    },
+    {
+      "naam": "Wasmiddel WIT",
+      "prijs": null
+    },
+    {
+      "naam": "Wasmiddel BONT",
+      "prijs": null
+    }
+  ],
+  "Molenaar": [
+    {
+      "naam": "Desinfectant slagroommachine",
+      "prijs": null
+    }
+  ],
+  "Packcenter Duiven": [
+    {
+      "naam": "papieren tussenlegger 150x100mm",
+      "prijs": null
+    },
+    {
+      "naam": "ersatzpapier 5kg",
+      "prijs": null
+    }
+  ],
+  "Profi Gelato": [
+    {
+      "naam": "Hazelnootpasta",
+      "prijs": 108.0
+    },
+    {
+      "naam": "Pistachepasta",
+      "prijs": 108.0
+    },
+    {
+      "naam": "Vanillepasta",
+      "prijs": 196.6
+    },
+    {
+      "naam": "Kwarkpoeder 1 kg",
+      "prijs": 30.5
+    },
+    {
+      "naam": "Limoncello",
+      "prijs": 17.8
+    },
+    {
+      "naam": "Meloen pasta 4 kg",
+      "prijs": 63.8
+    },
+    {
+      "naam": "Mango pasta 4 kg",
+      "prijs": 70.6
+    },
+    {
+      "naam": "Bosbes pasta 4 kg",
+      "prijs": 76.8
+    },
+    {
+      "naam": "Biscottino 4 kg",
+      "prijs": 72.8
+    },
+    {
+      "naam": "Aardbei premium pasta 4 kg",
+      "prijs": null
+    },
+    {
+      "naam": "Framboos pasta 4 kg",
+      "prijs": null
+    },
+    {
+      "naam": "Salted Caramel pasta 4 kg",
+      "prijs": 67.3
+    },
+    {
+      "naam": "Kokospasta 4 kg",
+      "prijs": 56.75
+    },
+    {
+      "naam": "Passiepasta 4 kg",
+      "prijs": 69.6
+    },
+    {
+      "naam": "Mascarpone 1,5 kg",
+      "prijs": 39.1
+    },
+    {
+      "naam": "Amarena variegato 4 kg",
+      "prijs": 51.7
+    },
+    {
+      "naam": "Watermeloen sprinter",
+      "prijs": null
+    },
+    {
+      "naam": "Bloedsinaasappel",
+      "prijs": 17.8
+    },
+    {
+      "naam": "Lemon Cake 4 kg",
+      "prijs": 72.8
+    },
+    {
+      "naam": "Passie variegato 4 kg",
+      "prijs": 69.3
+    },
+    {
+      "naam": "Mango pulp 3,1 kg",
+      "prijs": 12.75
+    },
+    {
+      "naam": "Caramel Pasta Mou 4 kg",
+      "prijs": 64.2
+    },
+    {
+      "naam": "Copertura Lemon 4 kg",
+      "prijs": 44.28
+    },
+    {
+      "naam": "Coperture White 4 kg",
+      "prijs": 37.62
+    },
+    {
+      "naam": "Straccialtella Fondente",
+      "prijs": null
+    },
+    {
+      "naam": "Coperture strawberry 4 kg",
+      "prijs": 40.86
+    },
+    {
+      "naam": "Hazelnoten 20 kg",
+      "prijs": 247.5
+    },
+    {
+      "naam": "Semifreddo",
+      "prijs": null
+    },
+    {
+      "naam": "Zuppa Inglese 2,6 kg",
+      "prijs": 80.37
+    },
+    {
+      "naam": "Kofkof",
+      "prijs": 124.6
+    },
+    {
+      "naam": "Witte Chocolade 4 kg",
+      "prijs": 57.0
+    },
+    {
+      "naam": "Marsepein pasta",
+      "prijs": 46.5
+    },
+    {
+      "naam": "Mousse Arancia",
+      "prijs": null
+    },
+    {
+      "naam": "Mousse Lemon",
+      "prijs": null
+    },
+    {
+      "naam": "Salted Caramel Variegato",
+      "prijs": null
+    },
+    {
+      "naam": "Varicream Brownie",
+      "prijs": null
+    },
+    {
+      "naam": "Varicream Biscolimone",
+      "prijs": null
+    },
+    {
+      "naam": "Brunella biscotto nero",
+      "prijs": null
+    }
+  ],
+  "Pure Hygiene": [
+    {
+      "naam": "Servet universeel N4",
+      "prijs": null
+    }
+  ],
+  "Puro": [
+    {
+      "naam": "Mix Profi-Gelato 10 kg",
+      "prijs": null
+    }
+  ],
+  "Roelofsen": [
+    {
+      "naam": "Bananen per kilo",
+      "prijs": null
+    },
+    {
+      "naam": "Citroenen per kist",
+      "prijs": null
+    },
+    {
+      "naam": "Grapefruits per stuk",
+      "prijs": null
+    },
+    {
+      "naam": "Ananas per stuk",
+      "prijs": null
+    },
+    {
+      "naam": "Munt",
+      "prijs": null
+    },
+    {
+      "naam": "Kiwi's per kilo",
+      "prijs": null
+    },
+    {
+      "naam": "Mango's",
+      "prijs": null
+    },
+    {
+      "naam": "Aardbeien",
+      "prijs": null
+    }
+  ],
+  "webshop.viv.nl": [
+    {
+      "naam": "Ersatz op rol, 50cm x 500m.wit",
+      "prijs": null
+    }
+  ]
+}
