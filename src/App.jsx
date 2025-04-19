@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import * as XLSX from "xlsx";
 
 export default function App() {
   const [data, setData] = useState(null);
@@ -7,30 +6,10 @@ export default function App() {
   const [invoer, setInvoer] = useState({});
 
   useEffect(() => {
-    const cached = localStorage.getItem("besteldata");
-    if (cached) {
-      setData(JSON.parse(cached));
-    }
+    fetch("/data.json")
+      .then((res) => res.json())
+      .then((json) => setData(json));
   }, []);
-
-  const handleUpload = (e) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-    reader.onload = (evt) => {
-      const wb = XLSX.read(evt.target.result, { type: "binary" });
-      const sheet = wb.Sheets[wb.SheetNames[0]];
-      const parsed = XLSX.utils.sheet_to_json(sheet);
-      const grouped = parsed.reduce((acc, row) => {
-        const { Leverancier, Product, Prijs } = row;
-        if (!acc[Leverancier]) acc[Leverancier] = [];
-        acc[Leverancier].push({ naam: Product, prijs: Prijs });
-        return acc;
-      }, {});
-      setData(grouped);
-      localStorage.setItem("besteldata", JSON.stringify(grouped));
-    };
-    reader.readAsBinaryString(file);
-  };
 
   const handleChange = (lev, naam, val) => {
     setInvoer({
@@ -50,13 +29,8 @@ export default function App() {
   if (!data) {
     return (
       <div className="p-4 max-w-md mx-auto">
-        <h1 className="text-xl font-bold mb-4">📤 Upload bestellijst (.xlsx)</h1>
-        <input
-          type="file"
-          accept=".xlsx"
-          onChange={handleUpload}
-          className="block w-full text-sm"
-        />
+        <h1 className="text-xl font-bold">📦 Besteltool</h1>
+        <p className="text-sm text-gray-600">Laden van productlijst...</p>
       </div>
     );
   }
