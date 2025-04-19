@@ -88,9 +88,4 @@ export default function BestelApp() {
       {leverancier === "Hanos" && (
         <div>
           <h2 className="text-xl font-semibold">🛒 Hanos (looproute)</h2>
-          {renderProductList(hanosProducten, hanos, setHanos)}
-        </div>
-      )}
-    </div>
-  );
-}
+          {renderProductList(hanosProducten, han
