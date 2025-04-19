@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
+import * as XLSX from "xlsx";
 
 export default function App() {
   const [data, setData] = useState(null);
   const [selected, setSelected] = useState(null);
   const [invoer, setInvoer] = useState({});
+  const [adminData, setAdminData] = useState(null);
 
   useEffect(() => {
     fetch("/data.json")
@@ -11,11 +13,44 @@ export default function App() {
       .then((json) => setData(json));
   }, []);
 
+  const handleAdminUpload = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (evt) => {
+      const wb = XLSX.read(evt.target.result, { type: "binary" });
+      const sheet = wb.Sheets[wb.SheetNames[0]];
+      const parsed = XLSX.utils.sheet_to_json(sheet);
+      const grouped = parsed.reduce((acc, row) => {
+        const { Leverancier, Product, Prijs } = row;
+        if (!acc[Leverancier]) acc[Leverancier] = [];
+        acc[Leverancier].push({ naam: Product, prijs: Prijs });
+        return acc;
+      }, {});
+      setAdminData(grouped);
+    };
+    reader.readAsBinaryString(file);
+  };
+
+  const exportToJSON = () => {
+    const blob = new Blob([JSON.stringify(adminData, null, 2)], {
+      type: "application/json",
+    });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "data.json";
+    a.click();
+  };
+
   const handleChange = (lev, naam, val) => {
     setInvoer({
       ...invoer,
       [lev]: { ...(invoer[lev] || {}), [naam]: val },
     });
+  };
+
+  const resetInvoer = (lev) => {
+    setInvoer({ ...invoer, [lev]: {} });
   };
 
   const whatsappText = (lev) => {
@@ -26,66 +61,86 @@ export default function App() {
     return `Hallo, hierbij mijn bestelling voor ${lev}:\n${lijst}`;
   };
 
-  if (!data) {
-    return (
-      <div className="p-4 max-w-md mx-auto">
-        <h1 className="text-xl font-bold">📦 Besteltool</h1>
-        <p className="text-sm text-gray-600">Laden van productlijst...</p>
-      </div>
-    );
-  }
-
-  const leveranciers = Object.keys(data);
-
   return (
-    <div className="p-4 space-y-4 max-w-md mx-auto">
+    <div className="p-4 space-y-6 max-w-md mx-auto">
       <h1 className="text-2xl font-bold">📦 Besteltool</h1>
-      <div className="flex flex-wrap gap-2">
-        {leveranciers.map((lev) => (
-          <button
-            key={lev}
-            onClick={() => setSelected(lev)}
-            className={`py-2 px-4 rounded ${
-              lev === selected
-                ? "bg-blue-600 text-white"
-                : "bg-gray-200 text-gray-700"
-            }`}
-          >
-            {lev}
-          </button>
-        ))}
-      </div>
 
-      {selected && (
-        <div className="space-y-2">
-          <h2 className="text-lg font-semibold">{selected}</h2>
-          {data[selected].map((item) => (
-            <div key={item.naam} className="flex justify-between items-center">
-              <span className="text-sm flex-1">{item.naam}</span>
-              <input
-                type="number"
-                min="0"
-                className="w-20 p-1 border rounded"
-                value={invoer[selected]?.[item.naam] || ""}
-                onChange={(e) =>
-                  handleChange(selected, item.naam, parseInt(e.target.value) || "")
-                }
-              />
-            </div>
-          ))}
-
-          {selected === "Profi Gelato" && (
-            <a
-              href={`https://wa.me/?text=${encodeURIComponent(
-                whatsappText(selected)
-              )}`}
-              target="_blank"
-              className="block mt-4 bg-green-600 text-white text-center p-2 rounded"
+      <details className="border rounded p-2">
+        <summary className="font-semibold cursor-pointer">📥 Admin Excel upload</summary>
+        <div className="mt-2 space-y-2">
+          <input type="file" accept=".xlsx" onChange={handleAdminUpload} />
+          {adminData && (
+            <button
+              onClick={exportToJSON}
+              className="bg-blue-600 text-white px-4 py-2 rounded"
             >
-              Verstuur via WhatsApp
-            </a>
+              Exporteer naar JSON
+            </button>
           )}
         </div>
+      </details>
+
+      {!data ? (
+        <p className="text-sm text-gray-600">Laden van centrale productlijst...</p>
+      ) : (
+        <>
+          <div className="flex flex-wrap gap-2">
+            {Object.keys(data).map((lev) => (
+              <button
+                key={lev}
+                onClick={() => setSelected(lev)}
+                className={`py-2 px-4 rounded ${
+                  lev === selected
+                    ? "bg-blue-600 text-white"
+                    : "bg-gray-200 text-gray-700"
+                }`}
+              >
+                {lev}
+              </button>
+            ))}
+          </div>
+
+          {selected && (
+            <div className="space-y-2">
+              <h2 className="text-lg font-semibold">{selected}</h2>
+
+              {data[selected].map((item) => (
+                <div key={item.naam} className="flex justify-between items-center">
+                  <span className="text-sm flex-1">{item.naam}</span>
+                  <input
+                    type="number"
+                    min="0"
+                    className="w-20 p-1 border rounded"
+                    value={invoer[selected]?.[item.naam] || ""}
+                    onChange={(e) =>
+                      handleChange(selected, item.naam, parseInt(e.target.value) || "")
+                    }
+                  />
+                </div>
+              ))}
+
+              <div className="flex gap-2 mt-3">
+                <button
+                  onClick={() => resetInvoer(selected)}
+                  className="flex-1 bg-gray-300 text-gray-800 py-2 rounded"
+                >
+                  Wissen
+                </button>
+                {selected === "Profi Gelato" && (
+                  <a
+                    href={`https://wa.me/?text=${encodeURIComponent(
+                      whatsappText(selected)
+                    )}`}
+                    target="_blank"
+                    className="flex-1 bg-green-600 text-white text-center py-2 rounded"
+                  >
+                    Verstuur via WhatsApp
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+        </>
       )}
     </div>
   );
