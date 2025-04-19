@@ -65,7 +65,7 @@ export default function App() {
     <div className="p-4 space-y-6 max-w-md mx-auto">
       <h1 className="text-2xl font-bold">📦 Besteltool</h1>
 
-      <details className="border rounded p-2">
+      <details className="hidden sm:block border rounded p-2">
         <summary className="font-semibold cursor-pointer">📥 Admin Excel upload</summary>
         <div className="mt-2 space-y-2">
           <input type="file" accept=".xlsx" onChange={handleAdminUpload} />
