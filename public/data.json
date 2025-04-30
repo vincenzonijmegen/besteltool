@@ -1,88 +1,88 @@
 {
   "Profi Gelato": [
     {
-      "naam": "Hazelnootpasta",
+      "naam": "Hazelnootpasta (4)",
       "prijs": 108
     },
     {
-      "naam": "Pistachepasta",
+      "naam": "Pistachepasta (4)",
       "prijs": 108
     },
     {
-      "naam": "Vanillepasta",
+      "naam": "Vanillepasta (1)",
       "prijs": 196.6
     },
     {
-      "naam": "Kwarkpoeder 1 kg",
+      "naam": "Kwarkpoeder 1 kg (1 doos)",
       "prijs": 30.5
     },
     {
-      "naam": "Limoncello",
+      "naam": "Limoncello (1 doos)",
       "prijs": 17.8
     },
     {
-      "naam": "Meloen pasta 4 kg",
+      "naam": "Meloen pasta 4 kg (1)",
       "prijs": 63.8
     },
     {
-      "naam": "Mango pasta 4 kg",
+      "naam": "Mango pasta 4 kg (3)",
       "prijs": 70.6
     },
     {
-      "naam": "Bosbes pasta 4 kg",
+      "naam": "Bosbes pasta 4 kg (1)",
       "prijs": 76.8
     },
     {
-      "naam": "Biscottino 4 kg",
+      "naam": "Biscottino 4 kg (2)",
       "prijs": 72.8
     },
     {
-      "naam": "Aardbei premium pasta 4 kg"
+      "naam": "Aardbei premium pasta 4 kg (3)"
     },
     {
-      "naam": "Framboos pasta 4 kg"
+      "naam": "Framboos pasta 4 kg (2)"
     },
     {
-      "naam": "Salted Caramel pasta 4 kg",
+      "naam": "Salted Caramel pasta 4 kg (2)",
       "prijs": 67.3
     },
     {
-      "naam": "Kokospasta 4 kg",
+      "naam": "Kokospasta 4 kg (2)",
       "prijs": 56.75
     },
     {
-      "naam": "Passiepasta 4 kg",
+      "naam": "Passiepasta 4 kg (1)",
       "prijs": 69.6
     },
     {
-      "naam": "Mascarpone 1,5 kg",
+      "naam": "Mascarpone 1,5 kg (2)",
       "prijs": 39.1
     },
     {
-      "naam": "Amarena variegato 4 kg",
+      "naam": "Amarena variegato 4 kg (3)",
       "prijs": 51.7
     },
     {
-      "naam": "Watermeloen sprinter"
+      "naam": "Watermeloen sprinter (1 doos)"
     },
     {
-      "naam": "Bloedsinaasappel",
+      "naam": "Bloedsinaasappel ",
       "prijs": 17.8
     },
     {
-      "naam": "Lemon Cake 4 kg",
+      "naam": "Lemon Cake 4 kg (2)",
       "prijs": 72.8
     },
     {
-      "naam": "Passie variegato 4 kg",
+      "naam": "Passie variegato 4 kg (1)",
       "prijs": 69.3
     },
     {
-      "naam": "Mango pulp 3,1 kg",
+      "naam": "Mango pulp 3,1 kg (2 dozen)",
       "prijs": 12.75
     },
     {
-      "naam": "Caramel Pasta Mou 4 kg",
+      "naam": "Caramel Pasta Mou 4 kg (1)",
       "prijs": 64.2
     },
     {
@@ -104,11 +104,11 @@
       "naam": "Semifreddo"
     },
     {
-      "naam": "Zuppa Inglese 2,6 kg",
+      "naam": "Zuppa Inglese 2,6 kg (1)",
       "prijs": 80.37
     },
     {
-      "naam": "Kofkof",
+      "naam": "Kofkof (1)",
       "prijs": 124.6
     },
     {
@@ -132,7 +132,7 @@
       "naam": "Varicream Biscolimone"
     },
     {
-      "naam": "Brunella biscotto nero"
+      "naam": "Brunella biscotto nero (1)"
     }
   ],
   "Hanos": [
@@ -536,6 +536,44 @@
     {
       "naam": "Plastik Domdeckel 10MG  doos a 1400 stuks ",
       "prijs": 77.14
+    }
+  ],
+  "Vincenzo": [
+    {
+      "naam": "Suikervrij aardbei (10)",
+      "prijs": 0
+    },
+    {
+      "naam": "Suikervrij mango (10)",
+      "prijs": 0
+    },
+    {
+      "naam": "Suikervrij bosbes (6)",
+      "prijs": 0
+    },
+    {
+      "naam": "Suikervrij chocolade (10)",
+      "prijs": 0
+    },
+    {
+      "naam": "Suikervrij hazelnoot (10)",
+      "prijs": 0
+    },
+    {
+      "naam": "Suikervrij cappuccino (6)",
+      "prijs": 0
+    },
+    {
+      "naam": "Potjes citroen (20)",
+      "prijs": 0
+    },
+    {
+      "naam": "Potten grapefruit (2)",
+      "prijs": 0
+    },
+    {
+      "naam": "Chocoladepotjes (20)(15)",
+      "prijs": 0
     }
   ]
 }
