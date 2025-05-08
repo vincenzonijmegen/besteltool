@@ -1,151 +1,119 @@
 {
   "Profi Gelato": [
     {
-      "naam": "Hazelnootpasta (4)",
+      "naam": "Hazelnootpasta (per doos)",
       "prijs": 108
     },
     {
-      "naam": "Pistachepasta (4)",
+      "naam": "Pistachepasta (per doos)",
       "prijs": 108
     },
     {
-      "naam": "Vanillepasta (1)",
+      "naam": "Vanillepasta (per emmer)",
       "prijs": 196.6
     },
     {
-      "naam": "Kwarkpoeder 1 kg (1 doos)",
+      "naam": "Kwarkpoeder 1 kg (per doos)",
       "prijs": 30.5
     },
     {
-      "naam": "Limoncello (1 doos)",
+      "naam": "Limoncello (per doos)",
       "prijs": 17.8
     },
     {
-      "naam": "Meloen pasta 4 kg (1)",
+      "naam": "Meloen pasta 4 kg (per emmer)",
       "prijs": 63.8
     },
     {
-      "naam": "Mango pasta 4 kg (3)",
+      "naam": "Mango pasta 4 kg (per doos)",
       "prijs": 70.6
     },
     {
-      "naam": "Bosbes pasta 4 kg (1)",
+      "naam": "Bosbes pasta 4 kg (per emmer)",
       "prijs": 76.8
     },
     {
-      "naam": "Biscottino 4 kg (2)",
+      "naam": "Biscottino 4 kg (per doos)",
       "prijs": 72.8
     },
     {
-      "naam": "Aardbei premium pasta 4 kg (3)"
+      "naam": "Aardbei premium pasta 4 kg (per doos)"
     },
     {
-      "naam": "Framboos pasta 4 kg (2)"
+      "naam": "Framboos pasta 4 kg (per doos)"
     },
     {
-      "naam": "Salted Caramel pasta 4 kg (2)",
+      "naam": "Salted Caramel pasta 4 kg (per doos)",
       "prijs": 67.3
     },
     {
-      "naam": "Kokospasta 4 kg (2)",
+      "naam": "Kokospasta 4 kg (per doos)",
       "prijs": 56.75
     },
     {
-      "naam": "Passiepasta 4 kg (1)",
+      "naam": "Passiepasta 4 kg (per emmer)",
       "prijs": 69.6
     },
     {
-      "naam": "Mascarpone 1,5 kg (2)",
+      "naam": "Mascarpone 1,5 kg (per zak)",
       "prijs": 39.1
     },
     {
-      "naam": "Amarena variegato 4 kg (3)",
+      "naam": "Amarena variegato 4 kg (per doos)",
       "prijs": 51.7
     },
     {
-      "naam": "Watermeloen sprinter (1 doos)"
+      "naam": "Watermeloen sprinter (per doos)"
     },
     {
-      "naam": "Bloedsinaasappel ",
+      "naam": "Bloedsinaasappel (per doos)",
       "prijs": 17.8
     },
     {
-      "naam": "Lemon Cake 4 kg (2)",
+      "naam": "Lemon Cake 4 kg (per doos)",
       "prijs": 72.8
     },
     {
-      "naam": "Passie variegato 4 kg (1)",
+      "naam": "Passie variegato 4 kg (per emmer)",
       "prijs": 69.3
     },
     {
-      "naam": "Mango pulp 3,1 kg (2 dozen)",
+      "naam": "Mango pulp 3,1 kg (per doos)",
       "prijs": 12.75
     },
     {
-      "naam": "Caramel Pasta Mou 4 kg (1)",
+      "naam": "Caramel Pasta Mou 4 kg (per emmer)",
       "prijs": 64.2
     },
     {
-      "naam": "Copertura Lemon 4 kg",
-      "prijs": 44.28
-    },
-    {
-      "naam": "Coperture White 4 kg",
-      "prijs": 37.62
-    },
-    {
-      "naam": "Straccialtella Fondente"
-    },
-    {
-      "naam": "Coperture strawberry 4 kg",
-      "prijs": 40.86
-    },
-    {
-      "naam": "Semifreddo"
-    },
-    {
-      "naam": "Zuppa Inglese 2,6 kg (1)",
+      "naam": "Zuppa Inglese 2,6 kg (per fles)",
       "prijs": 80.37
     },
     {
-      "naam": "Kofkof (1)",
+      "naam": "Kofkof (per fles)",
       "prijs": 124.6
     },
     {
-      "naam": "Witte Chocolade 4 kg",
+      "naam": "Witte Chocolade 4 kg (per emmer)",
       "prijs": 57
     },
     {
-      "naam": "Marsepein pasta",
-      "prijs": 46.5
+      "naam": "Mousse Arancia (per emmer)"
     },
     {
-      "naam": "Mousse Arancia"
+      "naam": "Fanta Crumble (per blik)"
     },
     {
-      "naam": "Mousse Lemon"
+      "naam": "Varicream Biscolimone (per emmer)"
     },
     {
-      "naam": "Varicream Brownie"
-    },
-    {
-      "naam": "Varicream Biscolimone"
-    },
-    {
-      "naam": "Brunella biscotto nero (1)"
+      "naam": "Brunella biscotto nero (per emmer)"
     }
   ],
   "Hanos": [
     {
-      "naam": "Friese Vlag Prof. lang houdbaar vol",
-      "prijs": 1.55
-    },
-    {
       "naam": "Bakgember Shavings /POLAK",
       "prijs": 1.78
-    },
-    {
-      "naam": "Fudge Caramel"
     },
     {
       "naam": "Ananaspuree "
@@ -208,8 +176,7 @@
       "prijs": 2.25
     },
     {
-      "naam": "Bastogne koeken (per 6)",
-      "prijs": 8.95
+      "naam": "Fudge Caramel"
     },
     {
       "naam": "Oreo"
@@ -373,10 +340,6 @@
       "prijs": 24.55
     },
     {
-      "naam": "Weisszucker fein 25 kg (palletprijs)",
-      "prijs": 16.65
-    },
-    {
       "naam": "Weisszucker fein EU 600",
       "prijs": 16
     },
@@ -437,10 +400,6 @@
       "prijs": 117.5
     },
     {
-      "naam": "Pistazien-Kerne 1a donkergroen KT 12.5kg",
-      "prijs": 498.75
-    },
-    {
       "naam": "Zimt Kaneel Granules P2 (5kg)",
       "prijs": 26.25
     },
@@ -463,18 +422,6 @@
     {
       "naam": "PREG Amaretto 50002 (6kg)",
       "prijs": 111
-    },
-    {
-      "naam": "Joy Pasta Tiramisu",
-      "prijs": 57.925000000000004
-    },
-    {
-      "naam": "Framboospasta",
-      "prijs": 41.300000000000004
-    },
-    {
-      "naam": "Lemon biscotto (3,5kg)",
-      "prijs": 36.925000000000004
     },
     {
       "naam": "PREG Omas Apfelku. Oaste 57802 3kg",
@@ -534,8 +481,13 @@
       "prijs": 29.94
     },
     {
-      "naam": "Plastik Domdeckel 10MG  doos a 1400 stuks ",
-      "prijs": 77.14
+      "naam": "Bekers Vincenzo roze"
+    },
+    {
+      "naam": "Bekers Vincenzo groen"
+    },
+    {
+      "naam": "Bekers Vincenzo geel"
     }
   ],
   "Vincenzo": [
