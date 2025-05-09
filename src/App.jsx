@@ -1,18 +1,34 @@
 import { useState, useEffect } from "react";
 import * as XLSX from "xlsx";
 
+const STORAGE_KEY = "besteltool_invoer";
+
 export default function App() {
   const [data, setData] = useState(null);
   const [selected, setSelected] = useState(null);
   const [invoer, setInvoer] = useState({});
   const [adminData, setAdminData] = useState(null);
 
+  // Ophalen van JSON (centrale productlijst)
   useEffect(() => {
     fetch("/data.json")
       .then((res) => res.json())
       .then((json) => setData(json));
   }, []);
 
+  // Ophalen van lokale opslag
+  useEffect(() => {
+    const opgeslagen = localStorage.getItem(STORAGE_KEY);
+    if (opgeslagen) {
+      try {
+        setInvoer(JSON.parse(opgeslagen));
+      } catch (err) {
+        console.error("Ongeldige localStorage-inhoud");
+      }
+    }
+  }, []);
+
+  // Admin Excel-upload
   const handleAdminUpload = (e) => {
     const file = e.target.files[0];
     const reader = new FileReader();
@@ -43,14 +59,18 @@ export default function App() {
   };
 
   const handleChange = (lev, naam, val) => {
-    setInvoer({
+    const nieuw = {
       ...invoer,
       [lev]: { ...(invoer[lev] || {}), [naam]: val },
-    });
+    };
+    setInvoer(nieuw);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(nieuw));
   };
 
   const resetInvoer = (lev) => {
-    setInvoer({ ...invoer, [lev]: {} });
+    const nieuw = { ...invoer, [lev]: {} };
+    setInvoer(nieuw);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(nieuw));
   };
 
   const whatsappText = (lev) => {
@@ -65,6 +85,7 @@ export default function App() {
     <div className="p-4 space-y-6 max-w-md mx-auto">
       <h1 className="text-2xl font-bold">📦 Besteltool</h1>
 
+      {/* Admin-upload */}
       <details className="hidden sm:block border rounded p-2">
         <summary className="font-semibold cursor-pointer">📥 Admin Excel upload</summary>
         <div className="mt-2 space-y-2">
@@ -84,6 +105,7 @@ export default function App() {
         <p className="text-sm text-gray-600">Laden van centrale productlijst...</p>
       ) : (
         <>
+          {/* Leveranciersknoppen */}
           <div className="flex flex-wrap gap-2">
             {Object.keys(data).map((lev) => (
               <button
@@ -100,6 +122,7 @@ export default function App() {
             ))}
           </div>
 
+          {/* Productlijst */}
           {selected && (
             <div className="space-y-2">
               <h2 className="text-lg font-semibold">{selected}</h2>
@@ -139,6 +162,7 @@ export default function App() {
                 </div>
               ))}
 
+              {/* Actieknoppen */}
               <div className="flex flex-wrap gap-2 mt-3">
                 <button
                   onClick={() => resetInvoer(selected)}
