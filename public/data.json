@@ -47,6 +47,9 @@
       "prijs": 67.3
     },
     {
+      "naam": "Tiramisu pasta 4kg (per doos)"
+    },
+    {
       "naam": "Kokospasta 4 kg (per doos)",
       "prijs": 56.75
     },
@@ -125,8 +128,7 @@
       "naam": "Tropicalpuree "
     },
     {
-      "naam": "Caramel topping",
-      "prijs": 4.5
+      "naam": "San Pellegrino (24)"
     },
     {
       "naam": "Water spa reine (24)",
@@ -158,6 +160,10 @@
     {
       "naam": "Cassis (24)",
       "prijs": 15.05
+    },
+    {
+      "naam": "Caramel topping",
+      "prijs": 4.5
     },
     {
       "naam": "Pindakaas 10 kg",
@@ -239,6 +245,9 @@
     },
     {
       "naam": "Wasmiddel BONT"
+    },
+    {
+      "naam": "Unicura handzeep"
     }
   ],
   "Roelofsen": [
@@ -436,10 +445,6 @@
       "prijs": 40.4
     },
     {
-      "naam": "PREG Kiwi  46172",
-      "prijs": 43.89
-    },
-    {
       "naam": "PREG Grün.Apfel Sp.22001",
       "prijs": 13
     },
@@ -453,10 +458,6 @@
     {
       "naam": "IC Joypaste Wassermelone 1,2 kg",
       "prijs": 14.46
-    },
-    {
-      "naam": "PREG Topping Kiwi 86106",
-      "prijs": 10.45
     },
     {
       "naam": "IC Joypaste Menta grün  1,2kg",
@@ -525,6 +526,10 @@
     },
     {
       "naam": "Chocoladepotjes (20)(15)",
+      "prijs": 0
+    },
+    {
+      "naam": "Adix check",
       "prijs": 0
     }
   ]
