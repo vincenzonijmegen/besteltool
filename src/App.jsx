@@ -11,7 +11,7 @@ export default function App() {
 
   // Ophalen van JSON (centrale productlijst)
   useEffect(() => {
-    fetch("/data.json")
+    fetch("https://yknympukfnazpvoxufwd.supabase.co/storage/v1/object/public/besteldata//data.json")
       .then((res) => res.json())
       .then((json) => setData(json));
   }, []);
