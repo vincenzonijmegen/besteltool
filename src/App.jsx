@@ -32,7 +32,7 @@ export default function App() {
 const SUPABASE_URL = "https://yknympukfnazpvoxufwd.supabase.co";
 const SUPABASE_BUCKET = "besteldata";
 const SUPABASE_FILE = "data.json";
-const SUPABASE_KEY = "<JOUW_SERVICE_ROLE_KEY>"; // ← Vervang dit met jouw service role key
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlrbnltcHVrZm5henB2b3h1ZndkIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0Nzk4NjI5MSwiZXhwIjoyMDYzNTYyMjkxfQ.0ohuYxV-zMzHRHBWbje5orEo1zrhgdBa6-j2apEIJ3Q"; // ← Vervang dit met jouw service role key
 
 const uploadToSupabase = async (jsonData) => {
   const blob = new Blob([JSON.stringify(jsonData, null, 2)], {
