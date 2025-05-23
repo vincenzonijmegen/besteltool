@@ -116,13 +116,9 @@ const handleAdminUpload = (e) => {
         <div className="mt-2 space-y-2">
           <input type="file" accept=".xlsx" onChange={handleAdminUpload} />
           {adminData && (
-            <button
-              onClick={exportToJSON}
-              className="bg-blue-600 text-white px-4 py-2 rounded"
-            >
-              Exporteer naar JSON
-            </button>
-          )}
+  <p className="text-sm text-green-600">✅ Upload naar Supabase geslaagd</p>
+)}
+
         </div>
       </details>
 
