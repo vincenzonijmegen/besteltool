@@ -29,36 +29,61 @@ export default function App() {
   }, []);
 
   // Admin Excel-upload
-  const handleAdminUpload = (e) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-    reader.onload = (evt) => {
-      const wb = XLSX.read(evt.target.result, { type: "binary" });
-      const sheet = wb.Sheets[wb.SheetNames[0]];
-      const parsed = XLSX.utils.sheet_to_json(sheet);
-      const grouped = parsed.reduce((acc, row) => {
-        const { Leverancier, Product, Prijs } = row;
-        if (!acc[Leverancier]) acc[Leverancier] = [];
-        acc[Leverancier].push({ naam: Product, prijs: Prijs });
-        return acc;
-      }, {});
-      setAdminData(grouped);
-    };
-    reader.readAsBinaryString(file);
-  };
+const SUPABASE_URL = "https://yknympukfnazpvoxufwd.supabase.co";
+const SUPABASE_BUCKET = "besteldata";
+const SUPABASE_FILE = "data.json";
+const SUPABASE_KEY = "<JOUW_SERVICE_ROLE_KEY>"; // ← Vervang dit met jouw service role key
 
-  const exportToJSON = () => {
-    const blob = new Blob([JSON.stringify(adminData, null, 2)], {
-      type: "application/json",
-    });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "data.json";
-    a.click();
-  };
+const uploadToSupabase = async (jsonData) => {
+  const blob = new Blob([JSON.stringify(jsonData, null, 2)], {
+    type: "application/json",
+  });
 
-  const handleChange = (lev, naam, val) => {
+  const response = await fetch(
+    `${SUPABASE_URL}/storage/v1/object/${SUPABASE_BUCKET}/${SUPABASE_FILE}`,
+    {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${SUPABASE_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: blob,
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(`Upload mislukt: ${response.status}`);
+  }
+};
+
+const handleAdminUpload = (e) => {
+  const file = e.target.files[0];
+  const reader = new FileReader();
+  reader.onload = (evt) => {
+    const wb = XLSX.read(evt.target.result, { type: "binary" });
+    const sheet = wb.Sheets[wb.SheetNames[0]];
+    const parsed = XLSX.utils.sheet_to_json(sheet);
+    const grouped = parsed.reduce((acc, row) => {
+      const { Leverancier, Product, Prijs } = row;
+      if (!acc[Leverancier]) acc[Leverancier] = [];
+      acc[Leverancier].push({ naam: Product, prijs: Prijs });
+      return acc;
+    }, {});
+    setAdminData(grouped);
+
+    uploadToSupabase(grouped)
+      .then(() => {
+        alert("Upload naar Supabase voltooid ✅");
+      })
+      .catch((err) => {
+        console.error("Uploadfout:", err);
+        alert("❌ Upload naar Supabase mislukt");
+      });
+  };
+  reader.readAsBinaryString(file);
+};
+
+   const handleChange = (lev, naam, val) => {
     const nieuw = {
       ...invoer,
       [lev]: { ...(invoer[lev] || {}), [naam]: val },
